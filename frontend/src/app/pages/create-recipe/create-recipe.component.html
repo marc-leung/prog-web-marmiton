@@ -1,0 +1,19 @@
+<mat-card>
+    <mat-card-title>Créer une nouvelle recette</mat-card-title>
+    <mat-card-content>
+      <form (ngSubmit)="submitRecipe()">
+        <mat-form-field class="full-width">
+          <mat-label>Nom de la recette</mat-label>
+          <input matInput [(ngModel)]="recipe.name" name="name" required>
+        </mat-form-field>
+  
+        <mat-form-field class="full-width">
+          <mat-label>Description</mat-label>
+          <textarea matInput [(ngModel)]="recipe.description" name="description" required></textarea>
+        </mat-form-field>
+  
+        <button mat-raised-button color="primary" type="submit">Enregistrer</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+  
